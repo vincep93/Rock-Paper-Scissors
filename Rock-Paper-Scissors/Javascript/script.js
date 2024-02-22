@@ -12,23 +12,20 @@
 
 
 
-const Rock;
-const Paper;
-const Scissors;
+const Rock = 0;
+const Paper = 1;
+const Scissors =2;
 
-let Rock > Scissors;
-let Paper > Rock;
-let Scissors > Paper;
 
-function computerSelect()
+function computerSelect(randomChoice);
 
-let randomChoice = Math.floor(Math.random()* 3 );
+let randomChoice = Math.floor(Math.random()* Array );
     if (randomChoice === 2) {
-        return choice[2];
+        return choice (2);
     } else if (randomChoice === 1) {
-        return choice[1];
+        return choice(1);
     } else (randomChoice === 0) {
-        return choice [0];
+        return choice (0);
     }
 
 
@@ -37,7 +34,7 @@ let randomChoice = Math.floor(Math.random()* 3 );
 function playRound(playerSelection, computerSelection) {
     // your code here!
 
-// player computer tie here 
+// player - computer tie here 
 if (playerSelection === Rock && computerSelect === Rock) {
     return prompt("Its a Tie. Pick again!");
 } else if {
@@ -49,6 +46,17 @@ if (playerSelection === Rock && computerSelect === Rock) {
     }
 }
 }
+
+
+
+//use this code for a tie instead!!!!!!
+// if (playerSelection === computerSelection) {
+//    return('its a tie');
+        
+//   } 
+
+
+
 
 
 //player loss
