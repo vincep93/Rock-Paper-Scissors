@@ -3,15 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
     <title>Rock-Paper-Scissors</title>
     <h1>Rock Paper Scissors</h1>
 
 </head>
 <body>
 
-    <h2>Player Score:</h2>
-    <h2>Computer Score:</h2>
-    <button type="button" id="shootbutton">Shoot!</button>
+    <div class=" scoreboard">
+        <div class="players">
+            <div class="Player">
+                <h2>Player Score:</h2>
+                <h2>0</h2> <!--need script to change the score with win-->
+            </div>
+    
+            <div class="computer">
+                <h2>Computer Score:</h2>
+                <h2>0</h2> <!--need script to change the score with win-->
+            </div>
+        </div>
+
+        <div class="shoot!">
+            <button type="button" id="rock-button">Rock!</button>
+            <button type="button" id="paper-button">Paper!</button>
+            <button type="button" id="scissors-button">Sissors!</button>
+        </div>
+    </div>
+
 
     <script src="js/script.js"></script>
 

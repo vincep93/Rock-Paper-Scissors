@@ -1,0 +1,14 @@
+.button {
+    background-color: grey;
+    color: red;
+    
+}
+
+.scoreboard {
+    border: 3px;
+    border-style: solid;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+

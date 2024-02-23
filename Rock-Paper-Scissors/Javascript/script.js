@@ -14,69 +14,49 @@
 
 const Rock = 0;
 const Paper = 1;
-const Scissors =2;
+const Scissors = 2;
 
-
+let randomChoice = Math.floor(Math.random() * 3);
 function computerSelect(randomChoice);
 
-let randomChoice = Math.floor(Math.random()* Array );
-    if (randomChoice === 2) {
-        return choice (2);
-    } else if (randomChoice === 1) {
-        return choice(1);
-    } else (randomChoice === 0) {
-        return choice (0);
-    }
+//ur function i.e: (Math.floor(Math.random() * 3))) executes and returns a random value which is stored into the randomChoice variable. So, it always uses that value unless u re-assign it 🤔 
 
 
+
+
+//code for buttons
+//document.getElementById('YourID').onclick = nameOfFunctionToBeCalled;
 
 
 function playRound(playerSelection, computerSelection) {
     // your code here!
 
 // player - computer tie here 
-if (playerSelection === Rock && computerSelect === Rock) {
-    return prompt("Its a Tie. Pick again!");
-} else if {
-    (playerSelection === Paper && computerSelect === Paper) {
-        return prompt("Its a Tie. Pick again!");
-} else if {
-    (playerSelection === Scissors && computerSelect === SCissors) {
-            return prompt("Its a Tie. Pick again!");
-    }
-}
-}
 
-
-
-//use this code for a tie instead!!!!!!
-// if (playerSelection === computerSelection) {
-//    return('its a tie');
-        
-//   } 
-
-
-
-
+ if (playerSelection === computerSelection) {
+    alert('its a tie');     
+} 
 
 //player loss
     if (playerSelection === Rock && computerSelect === Paper) {
-        return prompt("Paper beats Rock. You lose.")
-    } else if {
-        playerSelection = Paper, computerSelect = Scissors {
-            return prompt("Scissors beats Paper. You lose.")
-        }
-    } else if {
-        (playerSelection === Scissors && computerSelect === Scisors) {
-            return prompt("Its a Tie. Pick again!")
+            alert ("Paper beats Rock. You lose.")
+    } else if {playerSelection = Paper, computerSelect = Scissors
+        alert("Scissors beats Paper. You lose.")
+    } else {
+        (playerSelection === Scissors && computerSelect === Rock) 
+            alert ("Rock beats Scissors. You Lose.")
     }
-  }
   
 
 //player win
-  if (playerSelection === Rock && computerSelect === Scissors) {
-        return prompt ()
-  }
+if (playerSelection === Rock && computerSelect === Scissors) {
+        alert ("Rock beats Scissors. You win.")
+} else if { (playerSelection === Paper && computerSelect === Rock)
+    alert ("Paper beats Rock. You win.")
+} else { (playerSelection === Scissors && computerSelect === Paper)
+        alert ("Scissors beats Paper. You win.")}
+}
+
   
   const playerSelection = "rock";
   const computerSelection = getComputerChoice();
