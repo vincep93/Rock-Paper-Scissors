@@ -16,10 +16,15 @@ const Rock = 0;
 const Paper = 1;
 const Scissors = 2;
 
+let computerSelect = randomChoice;
 let randomChoice = Math.floor(Math.random() * 3);
 function computerSelect(randomChoice);
 
 //ur function i.e: (Math.floor(Math.random() * 3))) executes and returns a random value which is stored into the randomChoice variable. So, it always uses that value unless u re-assign it 🤔 
+
+//now that im thinking about it. I dont think that we need to return a value more than once. we just need the code to run again while maintaing the score. hmmmm
+
+//for function computerSelect(randomChoice) I think i need to put in the play function after it and tie it to the player choice to get this to work ie: function computerSelect(randomChoice) {if (computerSelect = 0) return Rock}
 
 
 
