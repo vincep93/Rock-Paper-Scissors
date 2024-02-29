@@ -12,56 +12,45 @@
 
 
 
-const rock = 0;
-const paper = 1;
-const scissors = 2;
-
-//const rock = document.getElementById("rock");
-    //rock.addEventListener("click") 
-        //console.log("rock")
-    //;
-
-
-
+const rock = 1;
+const paper = 2;
+const scissors = 3;
 
 
 const playerSelection = "rock" || "paper" || "scissors";
 // should this be const playerSelection = 0 || 1 || 2; ?????
 
-let randomChoice = Math.floor(Math.random() * 3);
-let computerSelect = randomChoice;
+
+//let computerSelect = randomChoice;
 //function computerSelect(randomChoice);
 
 //Note from Discord - ur function i.e: (Math.floor(Math.random() * 3))) executes and returns a random value which is stored into the randomChoice variable. So, it always uses that value unless u re-assign it 🤔 
-
-//now that im thinking about it. I dont think that we need to return a value more than once. we just need the code to run again while maintaing the score. hmmmm
 
 //for function computerSelect(randomChoice) I think i need to put in the play function after it and tie it to the player choice to get this to work ie: function computerSelect(randomChoice) {if (computerSelect = 0) return Rock}
 
 
 
+function computerSelect() {
+    // Array containing the words
+    let words = ["rock", "paper", "scissors"];
 
-//code for buttons
-//document.getElementById('YourID').onclick = nameOfFunctionToBeCalled;
+    // Generate a random index to select a word from the array
+    let randomIndex = Math.floor(Math.random() * words.length);
 
+    // Return the word at the randomly generated index
+    return words[randomIndex];
+}
 
-//$("rock-button").click(function() {
-//   var fired_button = $(this).val();
-//    alert(fired_button);
-//});
-
-//if click rock button then playerSelection === rock
-
-//else if click paper button then playerSelection === paper
-
-//else if click scissors button then playerSelection === scissors
-
+// Example usage:
+let randomChoice = computerSelect();
+console.log(randomChoice);
 
 
 
-function playRock(playerSelection = rock, computerSelect) {
 
-    document.getElementById('rock').onclick = playRock;
+function pickRock(playerSelection = rock, randomChoice) {
+
+    document.getElementById('1').onclick = pickRock;
 
     if (playerSelection === computerSelect) {
         alert('its a tie');     
@@ -71,42 +60,28 @@ function playRock(playerSelection = rock, computerSelect) {
         alert ("Rock beats Scissors. You win.")
 }
 
+function pickPaper(playerSelection = paper, computerSelect) {
 
+    document.getElementById('2').onclick = pickPaper;
 
+    if (playerSelection === computerSelect) {
+        alert('its a tie');     
+    } else if (playerSelection === paper && computerSelect === rock) {
+        alert ("Paper beats Rock. You win.")
+    } else (playerSelection === paper && computerSelect === scissors) 
+        alert ("Scissors beats Paper. You lose.")
 
-
-
-
-function playRound(playerSelection, computerSelect) {
-    // your code here!
-
-// player - computer tie here 
-
- if (playerSelection === computerSelect) {
-    alert('its a tie');     
-} 
-
-//player loss
-    if (playerSelection === rock && computerSelect === paper) {
-            alert ("Paper beats Rock. You lose.");
-    } else if (playerSelection = paper, computerSelect = scissors) { 
-        alert("Scissors beats Paper. You lose.");
-    } else (playerSelection === scissors && computerSelect === rock); {
-            alert ("Rock beats Scissors. You Lose.");
-    }
-  
-
-//player win
-if (playerSelection === rock && computerSelect === scissors) {
-        alert ("Rock beats Scissors. You win.")
-} else if (playerSelection === paper && computerSelect === rock) { 
-    alert ("Paper beats Rock. You win.")
-} else (playerSelection === scissors && computerSelect === paper); { 
-        alert ("Scissors beats Paper. You win.")}
 }
 
-  
-  
-  
-  //console.log(playRound(playerSelection, computerSelect));
-  
+function pickScissors(playerSelection = scissors, computerSelect) {
+
+    document.getElementById('3').onclick = pickPaper;
+
+    if (playerSelection === computerSelect) {
+        alert('its a tie');     
+    } else if (playerSelection === scissors && computerSelect === rock) {
+        alert ("Rock beats Scissors. You lose.")
+    } else (playerSelection === scissors && computerSelect === scissors) 
+        alert ("Scissors beats Paper. You win.")
+
+}

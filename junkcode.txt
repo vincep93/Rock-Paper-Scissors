@@ -1,0 +1,40 @@
+----------------------------------------------------------------------
+rock paper scissors game code -OLD-
+
+function playRound(playerSelection, computerSelect) {
+    // your code here!
+
+// player - computer tie here 
+
+ if (playerSelection === computerSelect) {
+    alert('its a tie');     
+} 
+
+//player loss
+    if (playerSelection === rock && computerSelect === paper) {
+            alert ("Paper beats Rock. You lose.");
+    } else if (playerSelection = paper, computerSelect = scissors) { 
+        alert("Scissors beats Paper. You lose.");
+    } else (playerSelection === scissors && computerSelect === rock); {
+            alert ("Rock beats Scissors. You Lose.");
+    }
+  
+
+//player win
+if (playerSelection === rock && computerSelect === scissors) {
+        alert ("Rock beats Scissors. You win.")
+} else if (playerSelection === paper && computerSelect === rock) { 
+    alert ("Paper beats Rock. You win.")
+} else (playerSelection === scissors && computerSelect === paper); { 
+        alert ("Scissors beats Paper. You win.")}
+}
+
+
+
+
+
+  
+  
+  
+  //console.log(playRound(playerSelection, computerSelect))
+-------------------------------------------------------------------------
