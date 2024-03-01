@@ -12,9 +12,9 @@
 
 
 
-const rock = 1;
-const paper = 2;
-const scissors = 3;
+const rock = "rock";
+const paper = "paper";
+const scissors = "scissors";
 
 
 const playerSelection = "rock" || "paper" || "scissors";
@@ -48,42 +48,49 @@ console.log(randomChoice);
 
 
 
-function pickRock(playerSelection = rock, randomChoice) {
+function pickRock() {
 
     document.getElementById('1').onclick = pickRock;
-
-    
     
     if (playerSelection === randomChoice) {
-        alert('its a tie');     
+        alert('its a tie')
+        return;     
     } else if (playerSelection === rock && randomChoice === paper) {
         alert ("Paper beats Rock. You lose.")
+        return;
     } else (playerSelection === rock && randomChoice === scissors) 
         alert ("Rock beats Scissors. You win.")
+        return;
 }
 
-function pickPaper(playerSelection = paper, computerSelect) {
+function pickPaper() {
 
     document.getElementById('2').onclick = pickPaper;
 
-    if (playerSelection === computerSelect) {
-        alert('its a tie');     
-    } else if (playerSelection === paper && computerSelect === rock) {
+    if (playerSelection === randomChoice) {
+        alert('its a tie')
+        return;     
+    } else if (playerSelection === paper && randomChoice === rock) {
         alert ("Paper beats Rock. You win.")
-    } else (playerSelection === paper && computerSelect === scissors) 
+        return;
+    } else (playerSelection === paper && randomChoice === scissors) 
         alert ("Scissors beats Paper. You lose.")
+        return;
 
 }
 
-function pickScissors(playerSelection = scissors, computerSelect) {
+function pickScissors() {
 
-    document.getElementById('3').onclick = pickPaper;
+    document.getElementById('3').onclick = pickScissors;
 
-    if (playerSelection === computerSelect) {
-        alert('its a tie');     
-    } else if (playerSelection === scissors && computerSelect === rock) {
+    if (playerSelection === randomChoice) {
+        alert('its a tie')
+        return;     
+    } else if (playerSelection === scissors && randomChoice === rock) {
         alert ("Rock beats Scissors. You lose.")
-    } else (playerSelection === scissors && computerSelect === scissors) 
+        return;
+    } else (playerSelection === scissors && randomChoice === paper) 
         alert ("Scissors beats Paper. You win.")
+        return;
 
 }
