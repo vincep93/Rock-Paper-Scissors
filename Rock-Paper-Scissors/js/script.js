@@ -52,11 +52,13 @@ function pickRock(playerSelection = rock, randomChoice) {
 
     document.getElementById('1').onclick = pickRock;
 
-    if (playerSelection === computerSelect) {
+    
+    
+    if (playerSelection === randomChoice) {
         alert('its a tie');     
-    } else if (playerSelection === rock && computerSelect === paper) {
+    } else if (playerSelection === rock && randomChoice === paper) {
         alert ("Paper beats Rock. You lose.")
-    } else (playerSelection === rock && computerSelect === scissors) 
+    } else (playerSelection === rock && randomChoice === scissors) 
         alert ("Rock beats Scissors. You win.")
 }
 
