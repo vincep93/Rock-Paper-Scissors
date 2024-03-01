@@ -12,17 +12,8 @@
 
 
 
-const rock = "rock";
-const paper = "paper";
-const scissors = "scissors";
 
 
-const playerSelection = "rock" || "paper" || "scissors";
-// should this be const playerSelection = 0 || 1 || 2; ?????
-
-
-//let computerSelect = randomChoice;
-//function computerSelect(randomChoice);
 
 //Note from Discord - ur function i.e: (Math.floor(Math.random() * 3))) executes and returns a random value which is stored into the randomChoice variable. So, it always uses that value unless u re-assign it 🤔 
 
@@ -30,23 +21,25 @@ const playerSelection = "rock" || "paper" || "scissors";
 
 
 
+
+
+const rock = "rock";
+const paper = "paper";
+const scissors = "scissors";
+
+
+const playerSelection = "rock" || "paper" || "scissors";
+
+
 function computerSelect() {
-    // Array containing the words
+    
     let words = ["rock", "paper", "scissors"];
-
-    // Generate a random index to select a word from the array
     let randomIndex = Math.floor(Math.random() * words.length);
-
-    // Return the word at the randomly generated index
     return words[randomIndex];
 }
 
-// Example usage:
 let randomChoice = computerSelect();
 console.log(randomChoice);
-
-
-
 
 function pickRock() {
 
