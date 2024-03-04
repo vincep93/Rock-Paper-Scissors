@@ -27,8 +27,11 @@ const rock = "rock";
 const paper = "paper";
 const scissors = "scissors";
 
+let playerScore = 0;
+let computerScore= 0;
 
-const playerSelection = "rock" || "paper" || "scissors";
+
+//const playerSelection = "rock" || "paper" || "scissors";
 
 
 function computerSelect() {
@@ -42,6 +45,7 @@ let randomChoice = computerSelect();
 console.log(randomChoice);
 
 function pickRock() {
+    playerSelection = "rock";
 
     document.getElementById('1').onclick = pickRock;
     
@@ -50,13 +54,16 @@ function pickRock() {
         return;     
     } else if (playerSelection === rock && randomChoice === paper) {
         alert ("Paper beats Rock. You lose.")
+        computerScore++;
         return;
     } else (playerSelection === rock && randomChoice === scissors) 
         alert ("Rock beats Scissors. You win.")
+        playerScore++;
         return;
 }
 
 function pickPaper() {
+    playerSelection = "paper";
 
     document.getElementById('2').onclick = pickPaper;
 
@@ -65,14 +72,17 @@ function pickPaper() {
         return;     
     } else if (playerSelection === paper && randomChoice === rock) {
         alert ("Paper beats Rock. You win.")
+        playerScore +=1;
         return;
     } else (playerSelection === paper && randomChoice === scissors) 
         alert ("Scissors beats Paper. You lose.")
+        computerScore +=1;
         return;
 
 }
 
 function pickScissors() {
+    playerSelection = "scissors";
 
     document.getElementById('3').onclick = pickScissors;
 
@@ -81,9 +91,11 @@ function pickScissors() {
         return;     
     } else if (playerSelection === scissors && randomChoice === rock) {
         alert ("Rock beats Scissors. You lose.")
+        computerScore +=1;
         return;
     } else (playerSelection === scissors && randomChoice === paper) 
         alert ("Scissors beats Paper. You win.")
+        playerScore +=1;
         return;
 
 }
